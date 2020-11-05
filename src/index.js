@@ -1,6 +1,11 @@
-const heading = document.createElement('h1');
-heading.textContent = 'Hello, World!';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const app = document.getElementById('root');
-app.append(heading);
+
+import './styles/index.scss';
+
+ReactDOM.render(
+  <div>Hello World!!</div>,
+  document.getElementById('root'),
+);
 
