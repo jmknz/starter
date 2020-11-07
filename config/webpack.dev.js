@@ -15,8 +15,5 @@ module.exports = merge(common, {
     compress: true,
     port: 3000,
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-  ],
+  plugins: [new webpack.HotModuleReplacementPlugin()],
 });
-

@@ -26,10 +26,10 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title: 'React Light',
-//      favicon: `${paths.src}/images/favicon.png`,
+      //      favicon: `${paths.src}/images/favicon.png`,
       template: `${paths.src}/template.html`,
       filename: 'index.html',
-    })
+    }),
   ],
   module: {
     rules: [
@@ -74,4 +74,3 @@ module.exports = {
     ],
   },
 };
-

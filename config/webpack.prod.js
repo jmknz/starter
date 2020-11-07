@@ -33,7 +33,7 @@ module.exports = merge(common, {
             },
           },
           'postcss-loader',
-          'sass-loader'
+          'sass-loader',
         ],
       },
     ],
@@ -51,4 +51,3 @@ module.exports = merge(common, {
     maxAssetSize: 512000,
   },
 });
-
