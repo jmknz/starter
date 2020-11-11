@@ -1,8 +1,10 @@
+/* eslint-disable import/no-extraneous-dependencies */
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const { merge } = require('webpack-merge');
+const ManifestPlugin = require('webpack-manifest-plugin');
 
-const paths = require('./paths');
+const paths = require('../paths');
 const common = require('./webpack.common');
 
 module.exports = merge(common, {
@@ -14,10 +16,12 @@ module.exports = merge(common, {
     filename: 'js/[name].[contenthash].bundle.js',
   },
   plugins: [
+    new ManifestPlugin(),
     new MiniCssExtractPlugin({
       filename: 'styles/[name].[contenthash].css',
       chunkFilename: '[id].css',
     }),
+    new OptimizeCssAssetsPlugin(),
   ],
   module: {
     rules: [
@@ -40,7 +44,6 @@ module.exports = merge(common, {
   },
   optimization: {
     minimize: true,
-    minimizer: [new OptimizeCssAssetsPlugin(), '...'],
     runtimeChunk: {
       name: 'runtime',
     },

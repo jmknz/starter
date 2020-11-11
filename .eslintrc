@@ -17,11 +17,14 @@
     "import"
   ],
   "extends": [
-    "eslint:recommended",
-    "plugin:react/all",
-    "plugin:react-hooks/recommended",
-    "plugin:prettier/recommended",
-    "airbnb"
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:jest/recommended",
+    "plugin:jest/style",
+    "plugin:jest-dom/recommended",
+    "plugin:testing-library/react",
+    "prettier",
+    "prettier/react"
   ],
   "rules": {
     "react/jsx-filename-extension": [
