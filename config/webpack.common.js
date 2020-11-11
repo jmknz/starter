@@ -11,6 +11,7 @@ module.exports = {
     filename: '[name].bundle.js',
     publicPath: '/',
   },
+  target: 'web',
   plugins: [
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
