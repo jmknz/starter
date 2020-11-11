@@ -1,6 +1,6 @@
 module.exports = (api) => {
   api.cache.using(() => process.env.NODE_ENV);
-  
+
   const plugins = ['@babel/plugin-proposal-class-properties'];
   if (!api.env('production')) {
     plugins.push('react-refresh/babel');
@@ -14,4 +14,3 @@ module.exports = (api) => {
     plugins,
   };
 };
-
