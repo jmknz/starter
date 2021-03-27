@@ -2,7 +2,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const { merge } = require('webpack-merge');
-const ManifestPlugin = require('webpack-manifest-plugin');
+const { WebpackManifestPlugin: ManifestPlugin } = require('webpack-manifest-plugin');
 
 const paths = require('../paths');
 const common = require('./webpack.common');
