@@ -2,7 +2,7 @@
   "name": "react-starter",
   "version": "0.1.0",
   "main": "index.js",
-  "author": "John MacKenzie <john.mackenzie@icf.com>",
+  "author": "John MacKenzie <jmknz.tech@gmail.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
