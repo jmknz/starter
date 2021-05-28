@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const { merge } = require('webpack-merge');
 const { WebpackManifestPlugin: ManifestPlugin } = require('webpack-manifest-plugin');
 
@@ -21,7 +21,6 @@ module.exports = merge(common, {
       filename: 'styles/[name].[contenthash].css',
       chunkFilename: '[id].css',
     }),
-    new OptimizeCssAssetsPlugin(),
   ],
   module: {
     rules: [
@@ -47,6 +46,10 @@ module.exports = merge(common, {
     runtimeChunk: {
       name: 'runtime',
     },
+    minimizer: [
+      `...`,
+      new CssMinimizerPlugin(),
+    ],
   },
   performance: {
     hints: false,
