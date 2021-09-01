@@ -12,12 +12,10 @@ module.exports = merge(common, {
   devtool: 'inline-source-map',
   devServer: {
     historyApiFallback: true,
-    contentBase: paths.build,
-    publicPath: '/',
+    static: paths.build,
     open: true,
     compress: true,
     port: 3000,
-    hot: true,
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
